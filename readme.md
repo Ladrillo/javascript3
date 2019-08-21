@@ -1,4 +1,4 @@
-# JavaScript 1
+# JavaScript 3
 
 - Clone repo.
 - Bring in the project's dependencies by running `npm install`.

@@ -54,7 +54,7 @@ function baz(name, age) { // functions are objects
   return name + ' your age is ' + age; // return value
 }
 
-baz.call('banana', 'Shaun' ,35); // INVOCATION, we fix the this to banana
+baz.call('banana', 'Shaun', 35); // INVOCATION, we fix the this to banana
 baz.apply('banana', ['Shaun', 35]); // INVOCATION, we fix the this to banana
 var copyOfFunction = baz.bind('banana'); // COPY, the copy has the this as banana
 
@@ -70,10 +70,19 @@ var person = {
   isVegetarian: true,
   orderFood: function () {
     if (this.isVegetarian) {
-      return 'gimme veggies'
+      return 'gimme veggies';
     }
-    return 'gimme burger'
+    return 'gimme burger';
   },
+  orderDrink: function () {
+    if (this.age > 17) {
+      return 'gimme beer';
+    }
+    return 'gimme soda';
+  },
+  rejuvenate: function () {
+    this.age = 17;
+  }
 };
 // you: make a naive object with a method that uses `this`.
 

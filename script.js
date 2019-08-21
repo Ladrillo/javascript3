@@ -34,6 +34,10 @@ var me = {
 };
 
 // 3- this - new keyword binding
+function MyPerson(name) {
+  this.name = name;
+}
+var personBuiltWithConstructor = new MyPerson('Luke');
 // you: make a simple constructor that uses `this`. What does `this` refer to?
 
 // 4- this - explicit binding

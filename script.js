@@ -162,3 +162,7 @@ var sonny = new Child('Tom', 5, 'trains'); // just copy
 Child.prototype.play = function () {
   return `playing with ${this.favoriteToy}`;
 }
+
+// class Vehicle
+// class Car that inherits from Vehicle
+// class ElectricCar inherits from Car from Vehicle

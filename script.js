@@ -94,6 +94,22 @@ function Person(theName, theAge, whetherVegetarian) {
   this.age = Number(theAge);
   this.isVegetarian = whetherVegetarian;
 }
+Person.prototype.orderFood = function () {
+  if (this.isVegetarian) {
+    return 'gimme veggies';
+  }
+  return 'gimme burger';
+};
+Person.prototype.orderDrink = function () {
+  if (this.age > 17) {
+    return 'gimme beer';
+  }
+  return 'gimme soda';
+};
+Person.prototype.rejuvenate = function () {
+  this.age = 17;
+};
+
 var luke = new Person('Luke', '25', false);
 var gabe = new Person('Gabe', '42', false);
 // you: make a constructor and tack a method to the prototype that uses `this`.

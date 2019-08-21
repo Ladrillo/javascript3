@@ -1,5 +1,5 @@
 // 1- this - window/undefined object binding
-var theOuterThis = this;
+var theOuterThis = this; // global or "window"
 var topLevelVariable = 76;
 // you: Create a few top-level variables. Can you find them on the window object?
 
@@ -47,13 +47,13 @@ let dog = new Animal('Scooby', 'Dog', 1);
 //        bind create a copy of the function with a bound this
 
 function baz(name, age) {
-  console.log(this); // side effect
+  // console.log(this); // side effect
   return name + ' your age is ' + age; // return value
 }
 
-baz.call(null, 'Shaun' ,35);
-baz.apply(null, ['Shaun', 35]);
-var copyOfFunction = baz.bind('banana');
+baz.call('banana', 'Shaun' ,35); // we fix the this to banana
+baz.apply('banana', ['Shaun', 35]); // we fix the this to banana
+var copyOfFunction = baz.bind('banana'); // the copy has the this as banana
 
 
 // you: make a simple function that takes 2 arguments and console.logs `this`.

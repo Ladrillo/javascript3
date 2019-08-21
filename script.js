@@ -14,7 +14,7 @@ var obj = {
   name: 'luks',
   foo: foo,
 }
-// obj.foo(); // <------ implicit binding
+// obj.foo(); // <------ implicit binding, the this is the object itself
 
 // you: make an object with a method that uses the `this` keyword. What does `this` refer to?
 
@@ -25,10 +25,13 @@ var me = {
   },
 };
 
+// me.speak() <--- example of implicit binding, the this is the object
+
 // 3- this - new keyword binding
 function MyPerson(name) {
   this.name = name;
 }
+// the this is the object that gets created!
 var personBuiltWithConstructor = new MyPerson('Luke');
 
 // you: make a simple constructor that uses `this`. What does `this` refer to?
@@ -44,7 +47,7 @@ let dog = new Animal('Scooby', 'Dog', 1);
 
 // 4- this - explicit binding
 //        call & apply are invocations
-//        bind create a copy of the function with a bound this
+//        bind creates a copy of the function with a bound this
 
 function baz(name, age) {
   // console.log(this); // side effect

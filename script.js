@@ -43,16 +43,17 @@ let cat = new Animal('Garfield', 'Cat', 5);
 let dog = new Animal('Scooby', 'Dog', 1);
 
 // 4- this - explicit binding
-//        call & apply
-//        bind
+//        call & apply are invocations
+//        bind create a copy of the function with a bound this
 
 function baz(name, age) {
-  // console.log(this); // side effect
+  console.log(this); // side effect
   return name + ' your age is ' + age; // return value
 }
 
 baz.call(null, 'Shaun' ,35);
 baz.apply(null, ['Shaun', 35]);
+var copyOfFunction = baz.bind('banana');
 
 
 // you: make a simple function that takes 2 arguments and console.logs `this`.

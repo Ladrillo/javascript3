@@ -165,4 +165,4 @@ Child.prototype.play = function () {
 
 // class Vehicle
 // class Car that inherits from Vehicle
-// class ElectricCar inherits from Car from Vehicle
+// class ElectricCar inherits from Car

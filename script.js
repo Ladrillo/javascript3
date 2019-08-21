@@ -23,8 +23,15 @@ var niceObject = {
   speak: function () {
     // speak invoked as a method... this becomes the object
     return this;
-  }
-}
+  },
+};
+
+var me = {
+  name: 'Melquisedeque Pereira',
+  speak: function () {
+    return 'My name is ' + this.name;
+  },
+};
 
 // 3- this - new keyword binding
 // you: make a simple constructor that uses `this`. What does `this` refer to?

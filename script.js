@@ -18,6 +18,14 @@ var obj = {
 
 // you: make an object with a method that uses the `this` keyword. What does `this` refer to?
 
+var niceObject = {
+  name: 'Gabe',
+  speak: function () {
+    // speak invoked as a method... this becomes the object
+    return this;
+  }
+}
+
 // 3- this - new keyword binding
 // you: make a simple constructor that uses `this`. What does `this` refer to?
 

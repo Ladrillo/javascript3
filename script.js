@@ -95,6 +95,7 @@ function Person(theName, theAge, whetherVegetarian) {
   this.isVegetarian = whetherVegetarian;
 }
 Person.prototype.orderFood = function () {
+  // this refers back to the instance!
   if (this.isVegetarian) {
     return 'gimme veggies';
   }
@@ -113,6 +114,9 @@ Person.prototype.rejuvenate = function () {
 var luke = new Person('Luke', '25', false);
 var gabe = new Person('Gabe', '42', false);
 // you: make a constructor and tack a method to the prototype that uses `this`.
+
+
+
 
 // 7- constructor functions can take anything we want
 // you: make a constructor that takes two args and initializes a total of five fields.

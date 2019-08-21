@@ -9,7 +9,7 @@ console.log(window.topLevelVariable);
 function foo() {
   return this;
 }
-// foo();
+// foo(); // <------ "window" binding
 var obj = {
   name: 'luks',
   foo: foo,
@@ -17,14 +17,6 @@ var obj = {
 // obj.foo(); // <------ implicit binding
 
 // you: make an object with a method that uses the `this` keyword. What does `this` refer to?
-
-var niceObject = {
-  name: 'Gabe',
-  speak: function () {
-    // speak invoked as a method... this becomes the object
-    return this;
-  },
-};
 
 var me = {
   name: 'Melquisedeque Pereira',
@@ -38,7 +30,17 @@ function MyPerson(name) {
   this.name = name;
 }
 var personBuiltWithConstructor = new MyPerson('Luke');
+
 // you: make a simple constructor that uses `this`. What does `this` refer to?
+
+function Animal(name, type, age) {
+  this.name = name;
+  this.type = type;
+  this.age = age;
+}
+
+let cat = new Animal('Garfield', 'Cat', 5);
+let dog = new Animal('Scooby', 'Dog', 1);
 
 // 4- this - explicit binding
 //        call & apply

@@ -148,6 +148,9 @@ function Dad(name, age) {
 Dad.prototype.greet = function () {
   return `Hey I am ${this.name} and I am ${this.age} years old`
 }
+Dad.prototype.smoke = function () {
+  return `puff puff`;
+}
 var daddy = new Dad('Samar', 23);
 
 function Child(name, age, favoriteToy) {

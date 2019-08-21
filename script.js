@@ -93,6 +93,7 @@ function Person(theName, theAge, whetherVegetarian) {
   this.name = theName;
   this.age = Number(theAge);
   this.isVegetarian = whetherVegetarian;
+  this.isHappy = true;
 }
 Person.prototype.orderFood = function () {
   // this refers back to the instance!
@@ -118,6 +119,22 @@ var gabe = new Person('Gabe', '42', false);
 
 // 7- constructor functions can take anything we want
 // you: make a constructor that takes two args and initializes a total of five fields.
+// object with player1, player2,
+function Game(data) {
+  this.player1 = data.player1;
+  this.player2 = data.player2;
+  this.player1Score = 0;
+  this.player2Score = 0;
+}
+Game.prototype.play = function (winner) {
+  // this[winner + 'Score'] = this[winner + 'Score'] + 20;
+  if (winner === 'player1') {
+    this.player1Score += 20;
+  } else {
+    this.player2Score += 20;
+  }
+}
+const myGame = new Game({ player1: 'Gabe', player2: 'Petar'});
 
 // 8- methods have access to all of state
 // you: make a constructor and tack a method to the prototype that uses several fields.

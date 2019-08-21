@@ -141,3 +141,17 @@ const myGame = new Game({ player1: 'Gabe', player2: 'Petar'});
 
 // 9- subclassing
 // you: subclass of any of your constructors.
+function Dad(name, age) {
+  this.name = name;
+  this.age = age;
+}
+Dad.prototype.greet = function () {
+  return `Hey I am ${this.name} and I am ${this.age} years old`
+}
+var daddy = new Dad('Samar', 23);
+
+function Child(name, age, favoriteToy) {
+  Dad.call(this, name, age);
+  this.favoriteToy = favoriteToy;
+}
+var sonny = new Child('Tom', 5, 'trains');

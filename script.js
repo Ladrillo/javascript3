@@ -87,6 +87,15 @@ var person = {
 // you: make a naive object with a method that uses `this`.
 
 // 6- making an object with constructor & prototype.
+function Person(theName, theAge, whetherVegetarian) {
+  // here we initialize the fields of the person instance
+  // using the arguments as raw material
+  this.name = theName;
+  this.age = Number(theAge);
+  this.isVegetarian = whetherVegetarian;
+}
+var luke = new Person('Luke', '25', false);
+var gabe = new Person('Gabe', '42', false);
 // you: make a constructor and tack a method to the prototype that uses `this`.
 
 // 7- constructor functions can take anything we want

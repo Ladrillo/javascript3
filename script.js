@@ -159,3 +159,6 @@ function Child(name, age, favoriteToy) {
 }
 Child.prototype = Object.create(Dad.prototype);
 var sonny = new Child('Tom', 5, 'trains'); // just copy
+Child.prototype.play = function () {
+  return `playing with ${this.favoriteToy}`;
+}

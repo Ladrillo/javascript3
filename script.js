@@ -151,7 +151,8 @@ Dad.prototype.greet = function () {
 var daddy = new Dad('Samar', 23);
 
 function Child(name, age, favoriteToy) {
-  Dad.call(this, name, age);
+  Dad.call(this, name, age); // just copy it until you understand
   this.favoriteToy = favoriteToy;
 }
-var sonny = new Child('Tom', 5, 'trains');
+Child.prototype = Object.create(Dad.prototype);
+var sonny = new Child('Tom', 5, 'trains'); // just copy

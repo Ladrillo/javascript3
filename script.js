@@ -54,9 +54,9 @@ function baz(name, age) {
   return name + ' your age is ' + age; // return value
 }
 
-baz.call('banana', 'Shaun' ,35); // we fix the this to banana
-baz.apply('banana', ['Shaun', 35]); // we fix the this to banana
-var copyOfFunction = baz.bind('banana'); // the copy has the this as banana
+baz.call('banana', 'Shaun' ,35); // INVOCATION, we fix the this to banana
+baz.apply('banana', ['Shaun', 35]); // INVOCATION, we fix the this to banana
+var copyOfFunction = baz.bind('banana'); // COPY, the copy has the this as banana
 
 
 // you: make a simple function that takes 2 arguments and console.logs `this`.

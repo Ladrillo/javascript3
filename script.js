@@ -49,7 +49,7 @@ let dog = new Animal('Scooby', 'Dog', 1);
 //        call & apply are invocations
 //        bind creates a copy of the function with a bound this
 
-function baz(name, age) {
+function baz(name, age) { // functions are objects
   // console.log(this); // side effect
   return name + ' your age is ' + age; // return value
 }
@@ -64,6 +64,17 @@ var copyOfFunction = baz.bind('banana'); // COPY, the copy has the this as banan
 // you: make a copy of the function using `bind`. Does it work as expected?
 
 // 5- making an object with methods manually (naive).
+var person = {
+  name: 'Luke',
+  age: 23,
+  isVegetarian: true,
+  orderFood: function () {
+    if (this.isVegetarian) {
+      return 'gimme veggies'
+    }
+    return 'gimme burger'
+  },
+};
 // you: make a naive object with a method that uses `this`.
 
 // 6- making an object with constructor & prototype.

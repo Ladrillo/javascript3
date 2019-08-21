@@ -3,7 +3,7 @@ var theOuterThis = this;
 var topLevelVariable = 76;
 // you: Create a few top-level variables. Can you find them on the window object?
 
-console.log(window.topLevelVariable);
+// console.log(window.topLevelVariable);
 
 // 2- this - implicit binding
 function foo() {
@@ -45,6 +45,16 @@ let dog = new Animal('Scooby', 'Dog', 1);
 // 4- this - explicit binding
 //        call & apply
 //        bind
+
+function baz(name, age) {
+  // console.log(this); // side effect
+  return name + ' your age is ' + age; // return value
+}
+
+baz.call(null, 'Shaun' ,35);
+baz.apply(null, ['Shaun', 35]);
+
+
 // you: make a simple function that takes 2 arguments and console.logs `this`.
 // you: Invoke it with `call` and `apply`.
 // you: make a copy of the function using `bind`. Does it work as expected?

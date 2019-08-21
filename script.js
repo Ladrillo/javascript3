@@ -1,7 +1,21 @@
 // 1- this - window/undefined object binding
+var theOuterThis = this;
+var topLevelVariable = 76;
 // you: Create a few top-level variables. Can you find them on the window object?
 
+console.log(window.topLevelVariable);
+
 // 2- this - implicit binding
+function foo() {
+  return this;
+}
+// foo();
+var obj = {
+  name: 'luks',
+  foo: foo,
+}
+// obj.foo(); // <------ implicit binding
+
 // you: make an object with a method that uses the `this` keyword. What does `this` refer to?
 
 // 3- this - new keyword binding

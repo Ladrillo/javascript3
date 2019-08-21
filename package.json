@@ -1,0 +1,11 @@
+{
+  "name": "javascript-3",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo 'hello from the test script!'"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
